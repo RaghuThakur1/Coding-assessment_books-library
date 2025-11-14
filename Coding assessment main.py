@@ -30,7 +30,7 @@ def search():
     book_list=[]
     for books in library_books:
         if search_book==books["author"].lower() or search_book==books["genre"].lower():
-            book_list.append(books)
+            book_list.append(f'{books['title']}, {books['author']}, {books['genre']}')
     if book_list:
         print(book_list)
 #    else:
