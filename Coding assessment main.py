@@ -16,7 +16,8 @@ def inventory():
     for books in library_books:
         print("-")
         for key, value in list(books.items())[:3]:#slicing learned by python doc file(codehs) 
-            print(f'{key}: {value}')
+            if books['available']==True:
+                print(f'{key}: {value}')
 
 inventory()
 
@@ -32,8 +33,8 @@ def search():
             book_list.append(books)
     if book_list:
         print(book_list)
-    else:
-        print(f"No results for {search_book}")
+#    else:
+ #       print(f"No results for {search_book}")
 search()
 
 
